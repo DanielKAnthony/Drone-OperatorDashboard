@@ -13,10 +13,10 @@ On initialization, the consumer app sets up a web socket to emit Kakfa messages 
 
 The `index` function acts as a listener to the `droneBusData` topic. In order for it to listen, the app needs to be open in a browser, not just running in a CMD which is a drawback that should be watched for now.
 
-The `sendMessage` function with a send message annotation gets run every time the equivalent `socketIO.on()` method gets called in React.
+The `sendMessage` function with a SocketIO annotation runs every time the equivalent `socketIO.on()` method gets called in React.
 
 ## React App
-All relevant state variables for now are stored in `DashParent.js` and passed as props to the map and table components accordingly.
+All relevant state variables for now are stored in `DashParent.js` and passed as props to the map and table components accordingly. Putting all this processing power in the parent component takes a toll on the front-end performance, and these socket tasks can be delegated to subcomponents later on to make it run smoothly. 
 
 Since the `useEffect` hook merges the previous functionality of `componentDidMount` and `componentDidUpdate`, a counter state variable was made just to always make sure SocketIO call is made, even if drone data values don't change between two calls.
 
