@@ -18,9 +18,9 @@ The `sendMessage` function with a SocketIO annotation runs every time the equiva
 ## React App
 All relevant state variables for now are stored in `DashParent.js` and passed as props to the map and table components accordingly. Putting all this processing power in the parent component takes a toll on the front-end performance, and these socket tasks can be delegated to subcomponents later on to make it run smoothly. 
 
-Since the `useEffect` hook merges the previous functionality of `componentDidMount` and `componentDidUpdate`, a counter state variable was made just to always make sure SocketIO call is made, even if drone data values don't change between two calls.
+Since the `useEffect` hook merges the previous functionality of `componentDidMount` and `componentDidUpdate`, a counter state variable was made to always make sure another SocketIO call is made, even if drone data values don't change between two calls.
 
-Leflet was used for map (for now). This can be changed to Google Maps; I'm currently working on another project right now where Leaflet is used, so I could develop it faster as it's fresh.
+Leflet was used for the map (for now). This can be changed to Google Maps; I'm currently working on another project right now where Leaflet is used, so I could develop it faster as it's fresh.
 
 ## Reproducing the Current Functionality
 These are the steps you need to take if you wish to get it up and running on your own computer. You need Kafka installed and if you're on a Mac, you'll need to figure out what the equivalents are to the `batch` files that are run in this procedure.
