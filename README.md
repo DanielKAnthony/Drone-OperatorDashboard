@@ -1,4 +1,4 @@
-# JAMZ Operator Dashboard
+# Drone Operator Dashboard
 So far, dashboard is capable of rendering real-time coordinates of drones along with a timestamp of when the coordinates were produced to the Apache Kafka pipeline.
 
 ## Apache Kafka Producer (Python Script)
