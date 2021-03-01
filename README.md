@@ -19,9 +19,9 @@ All relevant state variables for now are stored in `DashParent.js` and passed as
 Since the `useEffect` hook merges the previous functionality of `componentDidMount` and `componentDidUpdate`, a counter state variable was made to always make sure another SocketIO call is made, even if drone data values don't change between two calls.
 
 ## Reproducing the Current Functionality
-1. Open CMD and go the path where you put the Kafka folder. Then get zookeeper up and running with `./bin/windows/zookeeper-server-start.bat ../../config/zookeeper.properties`
+1. Open CMD and go to the local Kafka folder. Then get zookeeper up and running with `./bin/windows/zookeeper-server-start.bat ../../config/zookeeper.properties`
 
-2. Open a new CMD, go to the same path and get the Kafak server running with `kafka-server-start.bat ../../config/server.properties`
+2. Open a new CMD, go to the same path and get the Kafka server running with `kafka-server-start.bat ../../config/server.properties`
 
 3. Open new CMD -> same path, then create a topic called `droneBusData` with the command `kafka-topics.bat --zookeeper 0.0.0.0:2181 --topic droneBusData --create --partitions 1 --replication-factor 1`
 
